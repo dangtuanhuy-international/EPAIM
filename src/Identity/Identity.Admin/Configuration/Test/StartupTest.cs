@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Identity.Admin.EntityFramework.Shared.DbContexts;
+﻿using Identity.Admin.EntityFramework.Shared.DbContexts;
 using Identity.Admin.EntityFramework.Shared.Entities.Identity;
 using Identity.Admin.Helpers;
 using Identity.Admin.Middlewares;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Identity.Admin.Configuration.Test
 {

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
-using Microsoft.AspNetCore.Identity;
-using Skoruba.AuditLogging.Services;
+﻿using AutoMapper;
 using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
 using Identity.Admin.BusinessLogic.Identity.Events.Identity;
 using Identity.Admin.BusinessLogic.Identity.Resources;
@@ -14,6 +7,13 @@ using Identity.Admin.BusinessLogic.Shared.Dtos.Common;
 using Identity.Admin.BusinessLogic.Shared.ExceptionHandling;
 using Identity.Admin.EntityFramework.Extensions.Common;
 using Identity.Admin.EntityFramework.Identity.Repositories.Interfaces;
+using Microsoft.AspNetCore.Identity;
+using Skoruba.AuditLogging.Services;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.BusinessLogic.Identity.Services
 {
@@ -111,6 +111,7 @@ namespace Identity.Admin.BusinessLogic.Identity.Services
 
             return usersDto;
         }
+
         public virtual async Task<TRolesDto> GetRolesAsync(string search, int page = 1, int pageSize = 10)
         {
             PagedList<TRole> pagedList = await IdentityRepository.GetRolesAsync(search, page, pageSize);

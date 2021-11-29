@@ -21,6 +21,7 @@ namespace AdminApp.Core.Authentication
             _httpClient = httpClient;
             _sessionStorage = sessionStorage;
         }
+
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
             var savedToken = await _sessionStorage.GetItemAsync<string>(KeyConstants.AccessToken);

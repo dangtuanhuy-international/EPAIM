@@ -1,19 +1,18 @@
 using HealthChecks.UI.Client;
+using Identity.Admin.EntityFramework.Shared.DbContexts;
+using Identity.Admin.EntityFramework.Shared.Entities.Identity;
+using Identity.Shared.Helpers;
+using Identity.STS.Identity.Configuration;
+using Identity.STS.Identity.Configuration.Constants;
+using Identity.STS.Identity.Configuration.Interfaces;
+using Identity.STS.Identity.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Identity.Admin.EntityFramework.Shared.DbContexts;
-using Identity.Admin.EntityFramework.Shared.Entities.Identity;
-using Identity.STS.Identity.Configuration;
-using Identity.STS.Identity.Configuration.Constants;
-using Identity.STS.Identity.Configuration.Interfaces;
-using Identity.STS.Identity.Helpers;
 using System;
-using Microsoft.AspNetCore.DataProtection;
-using Identity.Shared.Helpers;
 
 namespace Identity.STS.Identity
 {

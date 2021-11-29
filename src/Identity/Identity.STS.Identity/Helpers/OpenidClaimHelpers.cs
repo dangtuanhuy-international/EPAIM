@@ -1,7 +1,7 @@
-﻿using IdentityModel;
+﻿using Identity.STS.Identity.Configuration.Constants;
+using IdentityModel;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Identity.STS.Identity.Configuration.Constants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +38,6 @@ namespace Identity.STS.Identity.Helpers
             {
                 addressJson[AddressClaimConstants.Country] = profile.Country;
             }
-
 
             return new Claim(JwtClaimTypes.Address, addressJson.Count != 0 ? addressJson.ToString() : string.Empty);
         }
@@ -91,7 +90,6 @@ namespace Identity.STS.Identity.Helpers
             }
             catch (JsonReaderException)
             {
-
             }
 
             return profile;

@@ -3,6 +3,7 @@
     public interface IBaseRoleDto
     {
         object Id { get; }
+
         bool IsDefaultId();
     }
 }

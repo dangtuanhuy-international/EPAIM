@@ -4,8 +4,10 @@
 // Original file: https://github.com/IdentityServer/IdentityServer4.Quickstart.UI
 // Modified by Jan �koruba
 
-using System.Linq;
-using System.Threading.Tasks;
+using Identity.STS.Identity.Configuration;
+using Identity.STS.Identity.Helpers;
+using Identity.STS.Identity.ViewModels.Account;
+using Identity.STS.Identity.ViewModels.Consent;
 using IdentityServer4;
 using IdentityServer4.Events;
 using IdentityServer4.Extensions;
@@ -15,10 +17,8 @@ using IdentityServer4.Stores;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Identity.STS.Identity.Configuration;
-using Identity.STS.Identity.Helpers;
-using Identity.STS.Identity.ViewModels.Account;
-using Identity.STS.Identity.ViewModels.Consent;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Identity.STS.Identity.Controllers
 {
@@ -103,6 +103,7 @@ namespace Identity.STS.Identity.Controllers
         /*****************************************/
         /* helper APIs for the ConsentController */
         /*****************************************/
+
         private async Task<ProcessConsentResult> ProcessConsent(ConsentInputModel model)
         {
             var result = new ProcessConsentResult();

@@ -9,7 +9,7 @@ namespace Identity.STS.Identity.Configuration.ApplicationParts
             if (controller.ControllerType.IsGenericType)
             {
                 // this change is required because some of the controllers have generic parameters
-                // and require resolution that will remove arity from the type 
+                // and require resolution that will remove arity from the type
                 // as well as remove the 'Controller' at the end of string
 
                 var name = controller.ControllerType.Name;

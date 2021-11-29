@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using IdentityServer4.Models;
-using Skoruba.AuditLogging.Services;
 using Identity.Admin.BusinessLogic.Dtos.Configuration;
 using Identity.Admin.BusinessLogic.Dtos.Enums;
 using Identity.Admin.BusinessLogic.Events.Client;
@@ -15,6 +9,12 @@ using Identity.Admin.BusinessLogic.Shared.Dtos.Common;
 using Identity.Admin.BusinessLogic.Shared.ExceptionHandling;
 using Identity.Admin.EntityFramework.Helpers;
 using Identity.Admin.EntityFramework.Repositories.Interfaces;
+using IdentityServer4.Models;
+using Skoruba.AuditLogging.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.BusinessLogic.Services
 {
@@ -52,29 +52,35 @@ namespace Identity.Admin.BusinessLogic.Services
             {
                 case ClientType.Empty:
                     break;
+
                 case ClientType.Web:
                     client.AllowedGrantTypes.AddRange(GrantTypes.Code);
                     client.RequirePkce = true;
                     client.RequireClientSecret = true;
                     break;
+
                 case ClientType.Spa:
                     client.AllowedGrantTypes.AddRange(GrantTypes.Code);
                     client.RequirePkce = true;
                     client.RequireClientSecret = false;
                     break;
+
                 case ClientType.Native:
                     client.AllowedGrantTypes.AddRange(GrantTypes.Code);
                     client.RequirePkce = true;
                     client.RequireClientSecret = false;
                     break;
+
                 case ClientType.Machine:
                     client.AllowedGrantTypes.AddRange(GrantTypes.ClientCredentials);
                     break;
+
                 case ClientType.Device:
                     client.AllowedGrantTypes.AddRange(GrantTypes.DeviceFlow);
                     client.RequireClientSecret = false;
                     client.AllowOfflineAccess = true;
                     break;
+
                 default:
                     throw new ArgumentOutOfRangeException();
             }

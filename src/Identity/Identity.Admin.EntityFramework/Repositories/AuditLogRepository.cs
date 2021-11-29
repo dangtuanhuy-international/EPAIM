@@ -1,13 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Skoruba.AuditLogging.EntityFramework.DbContexts;
-using Skoruba.AuditLogging.EntityFramework.Entities;
-using Identity.Admin.EntityFramework.Extensions.Common;
+﻿using Identity.Admin.EntityFramework.Extensions.Common;
 using Identity.Admin.EntityFramework.Extensions.Enums;
 using Identity.Admin.EntityFramework.Extensions.Extensions;
 using Identity.Admin.EntityFramework.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Skoruba.AuditLogging.EntityFramework.DbContexts;
+using Skoruba.AuditLogging.EntityFramework.Entities;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.EntityFramework.Repositories
 {

@@ -1,5 +1,4 @@
 ﻿var auditLog = {
-
     createJsonTree: function (json) {
         var result;
 
@@ -14,7 +13,6 @@
 
     initJsonTrees: function () {
         $(".json-tree").each(function () {
-
             var json = $(this).data("json-tree");
             var result = auditLog.createJsonTree(json);
 
@@ -44,11 +42,9 @@
         });
 
         $(".audit-log-delete-button").click(function () {
-
             $(".audit-log-form").validate();
 
             if ($(".audit-log-form").validate().form()) {
-
                 $("#deleteLogsModal").modal("show");
                 return false;
             } else {
@@ -59,12 +55,10 @@
     },
 
     init: function () {
-
         $(function () {
             auditLog.eventHandlers();
             auditLog.initJsonTrees();
         });
-
     }
 };
 

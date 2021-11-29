@@ -70,4 +70,3 @@ namespace Identity.STS.Identity.Helpers
         }
     }
 }
-

@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using AutoMapper;
-using IdentityServer4.EntityFramework.Entities;
+﻿using AutoMapper;
 using Identity.Admin.BusinessLogic.Dtos.Configuration;
 using Identity.Admin.EntityFramework.Extensions.Common;
+using IdentityServer4.EntityFramework.Entities;
+using System.Collections.Generic;
 
 namespace Identity.Admin.BusinessLogic.Mappers
 {
@@ -15,7 +15,6 @@ namespace Identity.Admin.BusinessLogic.Mappers
         }
 
         internal static IMapper Mapper { get; }
-
 
         public static IdentityResourceDto ToModel(this IdentityResource resource)
         {

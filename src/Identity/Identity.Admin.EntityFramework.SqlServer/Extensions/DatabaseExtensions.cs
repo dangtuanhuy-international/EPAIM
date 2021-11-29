@@ -1,11 +1,11 @@
-﻿using System.Reflection;
+﻿using Identity.Admin.EntityFramework.Interfaces;
 using IdentityServer4.EntityFramework.Storage;
 using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Skoruba.AuditLogging.EntityFramework.DbContexts;
 using Skoruba.AuditLogging.EntityFramework.Entities;
-using Identity.Admin.EntityFramework.Interfaces;
+using System.Reflection;
 
 namespace Identity.Admin.EntityFramework.SqlServer.Extensions
 {

@@ -1,18 +1,18 @@
-﻿using System;
+﻿using AutoMapper;
+using Identity.Admin.EntityFramework.Extensions.Common;
+using Identity.Admin.EntityFramework.Extensions.Enums;
+using Identity.Admin.EntityFramework.Extensions.Extensions;
+using Identity.Admin.EntityFramework.Identity.Repositories.Interfaces;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using AutoMapper;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Identity.Admin.EntityFramework.Extensions.Common;
-using Identity.Admin.EntityFramework.Extensions.Enums;
-using Identity.Admin.EntityFramework.Extensions.Extensions;
-using Identity.Admin.EntityFramework.Identity.Repositories.Interfaces;
 
 namespace Identity.Admin.EntityFramework.Identity.Repositories
 {
@@ -290,8 +290,6 @@ namespace Identity.Admin.EntityFramework.Identity.Repositories
                 .SingleOrDefaultAsync();
         }
 
-
-
         public virtual Task<TRoleClaim> GetRoleClaimAsync(string roleId, int claimId)
         {
             var roleIdConverted = ConvertKeyFromString(roleId);
@@ -299,8 +297,6 @@ namespace Identity.Admin.EntityFramework.Identity.Repositories
             return DbContext.Set<TRoleClaim>().Where(x => x.RoleId.Equals(roleIdConverted) && x.Id == claimId)
                 .SingleOrDefaultAsync();
         }
-
-
 
         public virtual async Task<IdentityResult> CreateUserClaimsAsync(TUserClaim claims)
         {
@@ -333,7 +329,6 @@ namespace Identity.Admin.EntityFramework.Identity.Repositories
 
             return await RoleManager.AddClaimAsync(role, new Claim(claims.ClaimType, claims.ClaimValue));
         }
-
 
         public virtual async Task<IdentityResult> DeleteUserClaimAsync(string userId, int claimId)
         {

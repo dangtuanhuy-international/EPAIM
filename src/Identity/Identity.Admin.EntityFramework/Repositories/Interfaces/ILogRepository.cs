@@ -1,7 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using Identity.Admin.EntityFramework.Entities;
+﻿using Identity.Admin.EntityFramework.Entities;
 using Identity.Admin.EntityFramework.Extensions.Common;
+using System;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.EntityFramework.Repositories.Interfaces
 {

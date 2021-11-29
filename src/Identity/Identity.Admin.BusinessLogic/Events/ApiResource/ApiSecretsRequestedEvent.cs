@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Skoruba.AuditLogging.Events;
+using System;
 using System.Collections.Generic;
-using Skoruba.AuditLogging.Events;
 
 namespace Identity.Admin.BusinessLogic.Events.ApiResource
 {
@@ -9,7 +9,6 @@ namespace Identity.Admin.BusinessLogic.Events.ApiResource
         public int ApiResourceId { get; set; }
 
         public List<(int apiSecretId, string type, DateTime? expiration)> Secrets { get; set; }
-
 
         public ApiSecretsRequestedEvent(int apiResourceId, List<(int apiSecretId, string type, DateTime? expiration)> secrets)
         {

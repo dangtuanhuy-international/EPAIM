@@ -1,12 +1,9 @@
 ﻿var errorLog = {
-
     eventHandlers: function () {
         $(".error-log-delete-button").click(function () {
-
             $(".error-log-form").validate();
 
             if ($(".error-log-form").validate().form()) {
-
                 $("#deleteLogsModal").modal("show");
                 return false;
             } else {
@@ -16,7 +13,6 @@
         });
 
         $(".row-error-detail>td").each(function () {
-
             var json = $(this).data("error-json");
             var result;
 
@@ -30,7 +26,6 @@
         });
 
         $(".btn-error-detail").click(function (e) {
-
             e.preventDefault();
 
             var errorId = $(this).data("error-id");
@@ -47,11 +42,9 @@
 
     init: function () {
         $(function () {
-
             errorLog.eventHandlers();
         });
     }
-
 };
 
 errorLog.init();

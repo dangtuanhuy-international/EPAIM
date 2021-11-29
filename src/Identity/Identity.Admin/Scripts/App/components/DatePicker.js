@@ -1,5 +1,4 @@
 ﻿$(function () {
-
     var adminDatePicker = {
         getCookie: function getCookie(cname) {
             var name = cname + '=';
@@ -33,7 +32,7 @@
         getLanguage: function () {
             //Defaults to en if no UiCulture found.
             var language = adminDatePicker.getUiCultureFromAspNetCoreCultureCookie() || 'en';
-            // bootstrap DatePicker supports Taiwanese chinese as well as Mainland. 
+            // bootstrap DatePicker supports Taiwanese chinese as well as Mainland.
             // Defaults to Mainland as we currently have no way of specifying variants.
             if (language === 'zh') language = 'zh-CN';
             return language;
@@ -45,9 +44,7 @@
                 language: adminDatePicker.getLanguage()
             });
         }
-
     };
-
 
     adminDatePicker.initDatePickers();
 })

@@ -18,8 +18,10 @@
             <div class="col-12">
                 <div class="alert alert-danger">
                     <strong>@Localizer["NoCodes"]</strong>
-                    <p>@Localizer["YouMust"] <a asp-action="GenerateRecoveryCodes">@Localizer["GenerateNewCodes"]</a>
-                        @Localizer["BeforeLogin"]</p>
+                    <p>
+                        @Localizer["YouMust"] <a asp-action="GenerateRecoveryCodes">@Localizer["GenerateNewCodes"]</a>
+                        @Localizer["BeforeLogin"]
+                    </p>
                 </div>
             </div>
         }
@@ -28,8 +30,9 @@
             <div class="col-12">
                 <div class="alert alert-danger">
                     <strong>@Localizer["OneCode"]</strong>
-                    <p>@Localizer["YouCanGenerateCodes"] <a
-                    asp-action="GenerateRecoveryCodes">@Localizer["GenerateNewCodes"]</a></p>
+                    <p>
+                        @Localizer["YouCanGenerateCodes"] <a asp-action="GenerateRecoveryCodes">@Localizer["GenerateNewCodes"]</a>
+                    </p>
                 </div>
             </div>
         }
@@ -57,7 +60,6 @@
             <a asp-action="GenerateRecoveryCodesWarning" class="btn btn-danger">@Localizer["ResetCodes"]</a>
         </div>
     }
-
 </div>
 
 <div class="row">
@@ -70,14 +72,14 @@
         @if (!Model.HasAuthenticator)
         {
             <a id="enable-authenticator" asp-action="EnableAuthenticator"
-            class="btn btn-primary">@Localizer["AddAuthenticator"]</a>
+               class="btn btn-primary">@Localizer["AddAuthenticator"]</a>
         }
         else
         {
             <a id="enable-authenticator" asp-action="EnableAuthenticator"
-            class="btn btn-primary">@Localizer["SetupAuthenticator"]</a>
+               class="btn btn-primary">@Localizer["SetupAuthenticator"]</a>
             <a id="reset-authenticator" asp-action="ResetAuthenticatorWarning"
-            class="btn btn-danger">@Localizer["ResetAuthenticator"]</a>
+               class="btn btn-danger">@Localizer["ResetAuthenticator"]</a>
         }
     </div>
 </div>

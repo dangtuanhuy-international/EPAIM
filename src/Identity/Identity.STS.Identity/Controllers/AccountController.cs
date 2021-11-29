@@ -4,12 +4,11 @@
 // Original file: https://github.com/IdentityServer/IdentityServer4.Samples
 // Modified by Jan Škoruba
 
-using System;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
+using Identity.Shared.Configuration.Identity;
+using Identity.STS.Identity.Configuration;
+using Identity.STS.Identity.Helpers;
+using Identity.STS.Identity.Helpers.Localization;
+using Identity.STS.Identity.ViewModels.Account;
 using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Events;
@@ -24,11 +23,12 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using Identity.Shared.Configuration.Identity;
-using Identity.STS.Identity.Configuration;
-using Identity.STS.Identity.Helpers;
-using Identity.STS.Identity.Helpers.Localization;
-using Identity.STS.Identity.ViewModels.Account;
+using System;
+using System.Linq;
+using System.Security.Claims;
+using System.Text;
+using System.Text.Encodings.Web;
+using System.Threading.Tasks;
 
 namespace Identity.STS.Identity.Controllers
 {
@@ -117,7 +117,7 @@ namespace Identity.STS.Identity.Controllers
             {
                 if (context != null)
                 {
-                    // if the user cancels, send a result back into IdentityServer as if they 
+                    // if the user cancels, send a result back into IdentityServer as if they
                     // denied the consent (even if this client does not require consent).
                     // this will send back an access denied OIDC error response to the client.
                     await _interaction.GrantConsentAsync(context, ConsentResponse.Denied);
@@ -193,7 +193,6 @@ namespace Identity.STS.Identity.Controllers
             var vm = await BuildLoginViewModelAsync(model);
             return View(vm);
         }
-
 
         /// <summary>
         /// Show logout page
@@ -298,6 +297,7 @@ namespace Identity.STS.Identity.Controllers
                             user = null;
                         }
                         break;
+
                     case LoginResolutionPolicy.Username:
                         user = await _userManager.FindByNameAsync(model.Username);
                         break;
@@ -587,8 +587,10 @@ namespace Identity.STS.Identity.Controllers
             {
                 case LoginResolutionPolicy.Username:
                     return View();
+
                 case LoginResolutionPolicy.Email:
                     return View("RegisterWithoutUsername");
+
                 default:
                     return View("RegisterFailure");
             }
@@ -670,6 +672,7 @@ namespace Identity.STS.Identity.Controllers
         /*****************************************/
         /* helper APIs for the AccountController */
         /*****************************************/
+
         private IActionResult RedirectToLocal(string returnUrl)
         {
             if (Url.IsLocalUrl(returnUrl))

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Identity.Admin.EntityFramework.Extensions.Common;
+﻿using Identity.Admin.EntityFramework.Extensions.Common;
+using System.Collections.Generic;
 
 namespace Identity.Admin.EntityFramework.Constants
 {

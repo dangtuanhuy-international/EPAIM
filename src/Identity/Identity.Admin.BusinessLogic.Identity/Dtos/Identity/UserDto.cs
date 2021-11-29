@@ -1,7 +1,7 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using Identity.Admin.BusinessLogic.Identity.Dtos.Identity.Base;
+﻿using Identity.Admin.BusinessLogic.Identity.Dtos.Identity.Base;
 using Identity.Admin.BusinessLogic.Identity.Dtos.Identity.Interfaces;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Identity.Admin.BusinessLogic.Identity.Dtos.Identity
 {

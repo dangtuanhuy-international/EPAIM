@@ -5,7 +5,7 @@
     <MudItem xs="12" sm="6" md="3">
         <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
             <MudIcon Icon="@Icons.Material.Filled.Euro" Color="Color.Primary" Class="mx-4"
-                Style="width:54px; height:54px;"></MudIcon>
+                     Style="width:54px; height:54px;"></MudIcon>
             <div>
                 <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">Total Cost</MudText>
                 <MudText Typo="Typo.h5">3,125,000</MudText>
@@ -15,7 +15,7 @@
     <MudItem xs="12" sm="6" md="3">
         <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
             <MudIcon Icon="@Icons.Material.Filled.Layers" Color="Color.Secondary" Class="mx-4"
-                Style="width:54px; height:54px;"></MudIcon>
+                     Style="width:54px; height:54px;"></MudIcon>
             <div>
                 <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">Graphite on roof</MudText>
                 <MudText Typo="Typo.h5">150,000</MudText>
@@ -25,7 +25,7 @@
     <MudItem xs="12" sm="6" md="3">
         <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
             <MudIcon Icon="@Icons.Material.Filled.Public" Color="Color.Success" Class="mx-4"
-                Style="width:54px; height:54px;"></MudIcon>
+                     Style="width:54px; height:54px;"></MudIcon>
             <div>
                 <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">Global Spread</MudText>
                 <MudText Typo="Typo.h5">12%</MudText>
@@ -35,7 +35,7 @@
     <MudItem xs="12" sm="6" md="3">
         <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height:100px;">
             <MudIcon Icon="@Icons.Custom.Uncategorized.Radioactive" Color="Color.Warning" Class="mx-4"
-                Style="width:54px; height:54px;"></MudIcon>
+                     Style="width:54px; height:54px;"></MudIcon>
             <div>
                 <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">Roentgen</MudText>
                 <MudText Typo="Typo.h5">3,6</MudText>
@@ -83,13 +83,13 @@
                                 </td>
                                 <td>
                                     <MudChip Label="true" Color="@report.Severity" Size="Size.Small"
-                                    Class="ml-auto mud-elevation-25">@report.SeverityTitle</MudChip>
-                                </td>
-                                <td>
-                                    <MudText>@report.Salary</MudText>
-                                </td>
-                            </tr>
-                        }
+                                             Class="ml-auto mud-elevation-25">@report.SeverityTitle</MudChip>
+                                        </td>
+                                        <td>
+                                            <MudText>@report.Salary</MudText>
+                                        </td>
+                                    </tr>
+                                }
                     </tbody>
                 </MudSimpleTable>
             </MudCardContent>
@@ -114,7 +114,7 @@
                                 <MudText Typo="Typo.body2">Issues is almost reaching 100</MudText>
                             </div>
                             <MudChip Label="true" Color="Color.Error" Size="Size.Small"
-                                Class="ml-auto mud-elevation-25">Danger</MudChip>
+                                     Class="ml-auto mud-elevation-25">Danger</MudChip>
                         </div>
                     </MudListItem>
                     <MudListItem>
@@ -127,7 +127,8 @@
                                 <MudText Typo="Typo.body2">Fire in reactor core</MudText>
                             </div>
                             <MudChip Label="true" Color="Color.Info" Size="Size.Small" Class="ml-auto mud-elevation-25">
-                                Minor</MudChip>
+                                Minor
+                            </MudChip>
                         </div>
                     </MudListItem>
                     <MudListItem>
@@ -140,7 +141,7 @@
                                 <MudText Typo="Typo.body2">Employee broke a finger while writing some code</MudText>
                             </div>
                             <MudChip Label="true" Color="Color.Success" Size="Size.Small"
-                                Class="ml-auto mud-elevation-25">Dismissed</MudChip>
+                                     Class="ml-auto mud-elevation-25">Dismissed</MudChip>
                         </div>
                     </MudListItem>
                 </MudList>
@@ -162,7 +163,7 @@ SeverityTitle = "Medium"},
 new EarningReport { Name = "Garderoben", Title = "CSS Magician", Avatar =
 "https://avatars2.githubusercontent.com/u/10367109?s=460&amp;u=2abf95f9e01132e8e2915def42895ffe99c5d2c6&amp;v=4", Salary
 = "$1337", Severity = Color.Primary, SeverityTitle = "High"},
-        };
+            };
 
     class EarningReport
     {

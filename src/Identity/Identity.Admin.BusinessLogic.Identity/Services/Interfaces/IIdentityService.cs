@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
+using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
 
 namespace Identity.Admin.BusinessLogic.Identity.Services.Interfaces
 {
@@ -36,7 +36,9 @@ namespace Identity.Admin.BusinessLogic.Identity.Services.Interfaces
         Task<bool> ExistsRoleAsync(string roleId);
 
         Task<TUsersDto> GetUsersAsync(string search, int page = 1, int pageSize = 10);
+
         Task<TUsersDto> GetRoleUsersAsync(string roleId, string search, int page = 1, int pageSize = 10);
+
         Task<TUsersDto> GetClaimUsersAsync(string claimType, string claimValue, int page = 1, int pageSize = 10);
 
         Task<TRolesDto> GetRolesAsync(string search, int page = 1, int pageSize = 10);

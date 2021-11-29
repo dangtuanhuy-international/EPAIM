@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace Identity.Shared.Configuration.Common
+﻿namespace Identity.Shared.Configuration.Common
 {
     public class AzureKeyVaultConfiguration
     {

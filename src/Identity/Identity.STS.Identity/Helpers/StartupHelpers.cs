@@ -1,9 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using Identity.Admin.EntityFramework.Helpers;
+using Identity.Admin.EntityFramework.Interfaces;
+using Identity.Admin.EntityFramework.Shared.Configuration;
+using Identity.Admin.EntityFramework.SqlServer.Extensions;
+using Identity.Shared.Authentication;
+using Identity.Shared.Configuration.Identity;
+using Identity.STS.Identity.Configuration;
+using Identity.STS.Identity.Configuration.ApplicationParts;
+using Identity.STS.Identity.Configuration.Constants;
+using Identity.STS.Identity.Configuration.Interfaces;
+using Identity.STS.Identity.Helpers.Localization;
+using Identity.STS.Identity.Services;
 using IdentityServer4.EntityFramework.Storage;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.AzureAD.UI;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
@@ -13,22 +25,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
-using Identity.STS.Identity.Configuration;
-using Identity.STS.Identity.Configuration.ApplicationParts;
-using Identity.STS.Identity.Configuration.Constants;
-using Identity.STS.Identity.Configuration.Interfaces;
-using Identity.STS.Identity.Helpers.Localization;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using Microsoft.AspNetCore.Authentication.AzureAD.UI;
-using Identity.Admin.EntityFramework.Interfaces;
-using Identity.Admin.EntityFramework.Shared.Configuration;
-using Identity.Admin.EntityFramework.SqlServer.Extensions;
-using Identity.Admin.EntityFramework.Helpers;
-using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
-using Identity.Shared.Authentication;
-using Identity.Shared.Configuration.Identity;
-using Identity.STS.Identity.Services;
 
 namespace Identity.STS.Identity.Helpers
 {
@@ -147,7 +147,6 @@ namespace Identity.STS.Identity.Helpers
                     });
                 });
             }
-
         }
 
         /// <summary>
@@ -177,6 +176,7 @@ namespace Identity.STS.Identity.Helpers
                 case DatabaseProviderType.SqlServer:
                     services.RegisterSqlServerDbContexts<TIdentityDbContext, TConfigurationDbContext, TPersistedGrantDbContext, TDataProtectionDbContext>(identityConnectionString, configurationConnectionString, persistedGrantsConnectionString, dataProtectionConnectionString);
                     break;
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(databaseProvider.ProviderType), $@"The value needs to be one of {string.Join(", ", Enum.GetNames(typeof(DatabaseProviderType)))}.");
             }
@@ -449,6 +449,7 @@ namespace Identity.STS.Identity.Helpers
                                 healthQuery: $"SELECT TOP 1 * FROM dbo.[{dataProtectionTableName}]");
 
                         break;
+
                     default:
                         throw new NotImplementedException($"Health checks not defined for database provider {databaseProvider.ProviderType}");
                 }

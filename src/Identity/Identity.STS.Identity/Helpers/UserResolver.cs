@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Identity.STS.Identity.Configuration;
+﻿using Identity.Shared.Configuration.Identity;
+using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
-using Identity.Shared.Configuration.Identity;
 
 namespace Identity.STS.Identity.Helpers
 {
@@ -22,8 +21,10 @@ namespace Identity.STS.Identity.Helpers
             {
                 case LoginResolutionPolicy.Username:
                     return await _userManager.FindByNameAsync(login);
+
                 case LoginResolutionPolicy.Email:
                     return await _userManager.FindByEmailAsync(login);
+
                 default:
                     return null;
             }

@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Identity.Admin.EntityFramework.Constants;
+﻿using Identity.Admin.EntityFramework.Constants;
 using Identity.Admin.EntityFramework.Entities;
 using Identity.Admin.EntityFramework.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Identity.Admin.EntityFramework.Shared.DbContexts
 {

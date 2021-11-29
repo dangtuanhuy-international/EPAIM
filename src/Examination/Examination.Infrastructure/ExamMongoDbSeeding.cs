@@ -1,18 +1,18 @@
-using System;
-using System.Threading.Tasks;
+using Examination.Domain.AggregateModels.CategoryAggregate;
+using Examination.Domain.AggregateModels.ExamAggregate;
+using Examination.Domain.AggregateModels.QuestionAggregate;
+using Examination.Dtos.Enums;
+using Examination.Infrastructure.SeedWork;
 using Microsoft.Extensions.Logging;
-using MongoDB.Bson;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using Polly;
 using Polly.Retry;
-using Examination.Infrastructure.SeedWork;
+using System;
 using System.Collections.Generic;
-using Examination.Domain.AggregateModels.CategoryAggregate;
-using Examination.Domain.AggregateModels.QuestionAggregate;
-using Examination.Domain.AggregateModels.ExamAggregate;
-using Examination.Dtos.Enums;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Examination.Infrastructure
 {
@@ -80,6 +80,7 @@ namespace Examination.Infrastructure
                     true),
             };
         }
+
         private List<Question> GetPredefinedQuestions(string categoryId1)
         {
             return new List<Question>()
@@ -176,6 +177,7 @@ namespace Examination.Infrastructure
                     "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."),
             };
         }
+
         private AsyncRetryPolicy CreatePolicy(ILogger<ExamMongoDbSeeding> logger, string prefix, int retries = 3)
         {
             return Policy.Handle<MongoException>().
@@ -188,6 +190,5 @@ namespace Examination.Infrastructure
                     }
                 );
         }
-
     }
 }

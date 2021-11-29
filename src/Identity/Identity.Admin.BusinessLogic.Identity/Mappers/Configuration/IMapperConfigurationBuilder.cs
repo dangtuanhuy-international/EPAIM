@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
 using Microsoft.AspNetCore.Identity;
-using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
+using System;
+using System.Collections.Generic;
 
 namespace Identity.Admin.BusinessLogic.Identity.Mappers.Configuration
 {

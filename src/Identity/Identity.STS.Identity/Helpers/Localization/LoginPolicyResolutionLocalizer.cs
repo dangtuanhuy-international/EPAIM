@@ -1,5 +1,4 @@
 ﻿using Identity.Shared.Configuration.Identity;
-using Identity.STS.Identity.Configuration;
 
 namespace Identity.STS.Identity.Helpers.Localization
 {
@@ -11,8 +10,10 @@ namespace Identity.STS.Identity.Helpers.Localization
             {
                 case LoginResolutionPolicy.Username:
                     return "Username";
+
                 case LoginResolutionPolicy.Email:
                     return "Email";
+
                 default:
                     return "Username";
             }

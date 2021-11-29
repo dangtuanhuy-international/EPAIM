@@ -27,15 +27,14 @@
     <title>@RootConfiguration.AdminConfiguration.PageTitle</title>
     <link rel="icon" type="image/x-icon" href="@UrlHelper.Content(RootConfiguration.AdminConfiguration.FaviconUri)" />
     <link rel="shortcut icon" type="image/x-icon"
-        href="@UrlHelper.Content(@RootConfiguration.AdminConfiguration.FaviconUri)" />
+          href="@UrlHelper.Content(@RootConfiguration.AdminConfiguration.FaviconUri)" />
 
     <environment include="Development">
         <link href="~/dist/css/bundle.min.css" asp-append-version="true" rel="stylesheet" />
         @if (!string.IsNullOrEmpty(RootConfiguration.AdminConfiguration.Theme))
         {
-            <link
-            href="@UrlHelper.Content(string.Concat("~/dist/css/themes/",RootConfiguration.AdminConfiguration.Theme,"/bootstrap.min.css"))"
-            asp-append-version="true" rel="stylesheet" />
+            <link href="@UrlHelper.Content(string.Concat("~/dist/css/themes/",RootConfiguration.AdminConfiguration.Theme,"/bootstrap.min.css"))"
+                  asp-append-version="true" rel="stylesheet" />
         }
         <link href="~/dist/css/web.css" asp-append-version="true" rel="stylesheet" />
     </environment>
@@ -44,9 +43,8 @@
 
         @if (!string.IsNullOrEmpty(RootConfiguration.AdminConfiguration.Theme))
         {
-            <link
-            href="@UrlHelper.Content(string.Concat("~/dist/css/themes/",RootConfiguration.AdminConfiguration.Theme,"/bootstrap.min.css"))"
-            asp-append-version="true" rel="stylesheet" />
+            <link href="@UrlHelper.Content(string.Concat("~/dist/css/themes/",RootConfiguration.AdminConfiguration.Theme,"/bootstrap.min.css"))"
+                  asp-append-version="true" rel="stylesheet" />
         }
 
         <link href="~/dist/css/web.min.css" asp-append-version="true" rel="stylesheet" />
@@ -55,7 +53,7 @@
     @if (!string.IsNullOrEmpty(RootConfiguration.AdminConfiguration.CustomThemeCss))
     {
         <link href="@UrlHelper.Content(RootConfiguration.AdminConfiguration.CustomThemeCss)" asp-append-version="true"
-        rel="stylesheet" />
+              rel="stylesheet" />
     }
 
     @await RenderSectionAsync("styles", required: false)
@@ -63,11 +61,12 @@
 
 <body>
 
-    <div
-        class="menu d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <div class="menu d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
         <!--Site name -->
-        <h3 class="menu-logo my-0 mr-md-auto font-weight-normal"><a class="logo" asp-area="" asp-controller="Home"
-                asp-action="Index">@RootConfiguration.AdminConfiguration.PageTitle</a></h3>
+        <h3 class="menu-logo my-0 mr-md-auto font-weight-normal">
+            <a class="logo" asp-area="" asp-controller="Home"
+               asp-action="Index">@RootConfiguration.AdminConfiguration.PageTitle</a>
+        </h3>
         <!--Menu item -->
         @if (User.Identity.IsAuthenticated && !string.IsNullOrEmpty(name))
         {
@@ -82,22 +81,22 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" asp-controller="Manage" asp-action="Index">@Localizer["ManageProfile"]</a>
                     <a class="dropdown-item" asp-controller="Manage"
-                    asp-action="PersonalData">@Localizer["ManagePersonalData"]</a>
+                       asp-action="PersonalData">@Localizer["ManagePersonalData"]</a>
                     @if (hasExternalLogins)
                     {
                         <a class="dropdown-item" asp-controller="Manage"
-                    asp-action="ExternalLogins">@Localizer["ExternalLogins"]</a>
+                           asp-action="ExternalLogins">@Localizer["ExternalLogins"]</a>
                     }
                     <a class="dropdown-item" asp-controller="Manage"
-                    asp-action="TwoFactorAuthentication">@Localizer["2FA"]</a>
+                       asp-action="TwoFactorAuthentication">@Localizer["2FA"]</a>
                     <a class="dropdown-item" asp-controller="Manage"
-                    asp-action="ChangePassword">@Localizer["ChangePassword"]</a>
+                       asp-action="ChangePassword">@Localizer["ChangePassword"]</a>
                     <a class="dropdown-item" asp-controller="Grants" asp-action="Index">@Localizer["Grants"]</a>
                 </div>
             </div>
 
             <a class="menu-item my-2 btn btn-outline-primary" asp-action="Logout"
-            asp-controller="Account">@Localizer["Signout"]</a>
+               asp-controller="Account">@Localizer["Signout"]</a>
         }
 
         <!--Menu button - show in < MD -->
@@ -115,7 +114,8 @@
                     @RootConfiguration.AdminConfiguration.PageTitle
                     <small class="d-block mb-3 text-muted">
                         @Localizer["FooterCopyright"] @DateTime.Now.Year -
-                        @await Html.PartialAsync("Common/ApplicationVersion")</small>
+                        @await Html.PartialAsync("Common/ApplicationVersion")
+                    </small>
                 </div>
                 <div class="col-md-6 text-right">
                     @await Html.PartialAsync("Common/SelectLanguage")
@@ -133,5 +133,4 @@
 
     @await RenderSectionAsync("scripts", required: false)
 </body>
-
 </html>

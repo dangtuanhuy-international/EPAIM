@@ -1,5 +1,5 @@
-﻿using Skoruba.AuditLogging.Events;
-using Identity.Admin.BusinessLogic.Dtos.Configuration;
+﻿using Identity.Admin.BusinessLogic.Dtos.Configuration;
+using Skoruba.AuditLogging.Events;
 
 namespace Identity.Admin.BusinessLogic.Events.IdentityResource
 {

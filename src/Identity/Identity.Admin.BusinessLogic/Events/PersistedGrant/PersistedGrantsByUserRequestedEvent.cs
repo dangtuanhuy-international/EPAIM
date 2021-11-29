@@ -1,5 +1,5 @@
-﻿using Skoruba.AuditLogging.Events;
-using Identity.Admin.BusinessLogic.Dtos.Grant;
+﻿using Identity.Admin.BusinessLogic.Dtos.Grant;
+using Skoruba.AuditLogging.Events;
 
 namespace Identity.Admin.BusinessLogic.Events.PersistedGrant
 {

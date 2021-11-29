@@ -3,7 +3,7 @@
 @inject IViewLocalizer Localizer
 @inject IRootConfiguration RootConfiguration
 @{
-    Layout = null; 
+    Layout = null;
 }
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="icon" type="image/x-icon" href="@UrlHelper.Content(RootConfiguration.AdminConfiguration.FaviconUri)" />
     <link rel="shortcut icon" type="image/x-icon"
-        href="@UrlHelper.Content(RootConfiguration.AdminConfiguration.FaviconUri)" />
+          href="@UrlHelper.Content(RootConfiguration.AdminConfiguration.FaviconUri)" />
     <title>@Localizer["PageTitle"]</title>
 
     <environment include="Development">
@@ -40,9 +40,9 @@
                                 <span class="oi oi-circle-x" title="Warning" aria-hidden="true"></span>
                             </h1>
                             <a href="@RootConfiguration.AdminConfiguration.IdentityServerBaseUrl"
-                                class="btn btn-lg btn-block btn-danger">@Localizer["ReturnToIdentityServer"]</a>
+                               class="btn btn-lg btn-block btn-danger">@Localizer["ReturnToIdentityServer"]</a>
                             <a asp-controller="Account" asp-action="Logout"
-                                class="btn btn-lg btn-block btn-danger">@Localizer["Logout"]</a>
+                               class="btn btn-lg btn-block btn-danger">@Localizer["Logout"]</a>
                         </div>
                     </div>
                 </div>
@@ -56,5 +56,4 @@
         <script src="~/dist/js/bundle.min.js" asp-append-version="true"></script>
     </environment>
 </body>
-
 </html>

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Identity.Admin.Configuration.Constants
+﻿namespace Identity.Admin.Configuration.Constants
 {
     public class ConfigurationConsts
     {
@@ -27,6 +25,5 @@ namespace Identity.Admin.Configuration.Constants
         public const string DataProtectionDbConnectionStringKey = "DataProtectionDbConnection";
 
         public const string CspTrustedDomainsKey = "CspTrustedDomains";
-
     }
 }

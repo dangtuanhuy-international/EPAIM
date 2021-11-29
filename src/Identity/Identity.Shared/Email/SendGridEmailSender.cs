@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity.UI.Services;
+﻿using Identity.Shared.Configuration.Email;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Logging;
 using SendGrid;
-using Identity.Shared.Configuration.Email;
 using System.Threading.Tasks;
 
 namespace Identity.Shared.Email
@@ -41,6 +41,7 @@ namespace Identity.Shared.Email
                 case System.Net.HttpStatusCode.Accepted:
                     _logger.LogInformation($"Email: {email}, subject: {subject}, message: {htmlMessage} successfully sent");
                     break;
+
                 default:
                     {
                         var errorMessage = await response.Body.ReadAsStringAsync();

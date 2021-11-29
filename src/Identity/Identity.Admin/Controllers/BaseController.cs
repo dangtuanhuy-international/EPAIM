@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Identity.Admin.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Identity.Admin.Helpers;
+using System.Collections.Generic;
 
 namespace Identity.Admin.Controllers
 {

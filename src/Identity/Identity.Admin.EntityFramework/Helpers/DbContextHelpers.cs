@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Linq;
 
 namespace Identity.Admin.EntityFramework.Helpers
@@ -12,7 +12,7 @@ namespace Identity.Admin.EntityFramework.Helpers
         /// </summary>
         /// <typeparam name="TDbContext"></typeparam>
         /// <param name="serviceProvider"></param>
-        /// <param name="entityTypeName">If specified, the full name of the type of the entity. 
+        /// <param name="entityTypeName">If specified, the full name of the type of the entity.
         /// Otherwise, the first entity in the DbContext will be retrieved</param>
         /// <returns></returns>
         public static string GetEntityTable<TDbContext>(IServiceProvider serviceProvider, string entityTypeName = null)

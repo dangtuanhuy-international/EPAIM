@@ -4,6 +4,5 @@ namespace Identity.Shared.Dtos.Identity
 {
     public class IdentityUserDto : UserDto<string>
     {
-
     }
 }

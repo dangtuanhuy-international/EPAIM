@@ -25,7 +25,6 @@ ko.bindingHandlers.modal = {
 
 ko.components.register('picker', {
     viewModel: function viewModel(params) {
-
         var self = this;
 
         //Constants
@@ -87,7 +86,6 @@ ko.components.register('picker', {
 
         //Track changes on search input
         this.textTerm.subscribe(function (searchTerm) {
-
             //If is search input clear -> clear search result
             if (searchTerm.trim() === "") {
                 self.searchResult([]);
@@ -95,14 +93,12 @@ ko.components.register('picker', {
 
             //If search term isn't empty and has min length characters
             if (searchTerm.trim() !== "" && searchTerm.trim().length >= self.minSearchText()) {
-
                 if (params.url) {
                     //start loading
                     self.loading(true);
 
                     //make ajax request and result add to search result
                     $.get(params.url + '=' + searchTerm, function (data) {
-
                         if (data.indexOf(searchTerm) === -1) {
                             data.push(searchTerm);
                         }
@@ -132,13 +128,11 @@ ko.components.register('picker', {
 
         //Action methods
         this.add = function (item) {
-
             //Replace quotes
             item = item.replace(/'/g, "").replace(/"/g, "");
 
             //Check if selected item is exists in selected items array
             if (this.selectedResult.indexOf(item) > -1) {
-
                 if (this.allowItemAlreadySelectedNotification() === true) {
                     this.notify(item);
                 }
@@ -155,15 +149,14 @@ ko.components.register('picker', {
             }
             //Multiple select
             else if (this.multipleSelect() === true) {
-                    this.selectedResult.push(item);
-                    this.clear();
-                    this.sync();
-                }
+                this.selectedResult.push(item);
+                this.clear();
+                this.sync();
+            }
         };
 
         //Get suggested items - by default 5 items
         this.getSuggestedItems = function () {
-
             if (self.allowSuggestedItems() === false) return;
 
             if (params.url) {
@@ -174,7 +167,6 @@ ko.components.register('picker', {
                 $.get(params.url, {
                     limit: self.topSuggestedItems()
                 }, function (data) {
-
                     self.suggestedResult(data);
 
                     //stop loading
@@ -201,7 +193,6 @@ ko.components.register('picker', {
 
         //Save item after editing
         this.submitEditDialog = function () {
-
             //If is editing item empty
             if (self.editedItem().trim() === "") {
                 return;
@@ -222,7 +213,6 @@ ko.components.register('picker', {
 
         //Check if item which is editing is already selected
         this.checkIfItemExists = function (item, newValue) {
-
             //The original item is same like new item
             if (item.trim() === newValue.trim()) {
                 return false;
@@ -238,7 +228,6 @@ ko.components.register('picker', {
 
         //Update selected result
         this.update = function (item, newValue) {
-
             for (var i = 0; i < self.selectedResult().length; i++) {
                 if (self.selectedResult()[i] === item) {
                     self.selectedResult()[i] = newValue;
@@ -258,14 +247,12 @@ ko.components.register('picker', {
 
         //Show all items into suggested items
         this.showAll = function () {
-
             if (params.url) {
                 //start loading
                 self.loading(true);
 
                 //make ajax request and result add to search result
                 $.get('' + params.url, function (data) {
-
                     self.suggestedResult(data);
 
                     //stop loading
@@ -299,4 +286,3 @@ ko.components.register('picker', {
 });
 
 ko.applyBindings();
-

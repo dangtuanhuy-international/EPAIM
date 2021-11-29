@@ -17,7 +17,6 @@ namespace Examination.Domain.AggregateModels.UserAggregate
         public string FirstName { get; set; }
 
         [BsonElement("lastName")]
-
         public string LastName { get; set; }
 
         public static User CreateNewUser(string externalId, string firstName, string lastName)

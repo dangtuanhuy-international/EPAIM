@@ -1,10 +1,10 @@
 ﻿// Original file comes from: https://github.com/damienbod/IdentityServer4AspNetCoreIdentityTemplate
 // Modified by Jan Škoruba
 
-using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
 using Identity.Shared.Configuration.Common;
 using Identity.Shared.Services;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
 
 namespace Identity.Shared.Helpers
 {

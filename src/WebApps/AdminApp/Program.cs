@@ -1,18 +1,14 @@
+using AdminApp.Core.Authentication;
+using AdminApp.Services;
+using AdminApp.Services.Interfaces;
+using Blazored.SessionStorage;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using MudBlazor.Services;
 using System;
 using System.Net.Http;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Text;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using MudBlazor.Services;
-using Blazored.SessionStorage;
-using AdminApp.Services.Interfaces;
-using AdminApp.Services;
-using Microsoft.AspNetCore.Components.Authorization;
-using AdminApp.Core.Authentication;
 
 namespace AdminApp
 {

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Identity.Admin.BusinessLogic.Shared.Dtos.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Identity.Admin.BusinessLogic.Shared.Dtos.Common;
 
 namespace Identity.Admin.BusinessLogic.Helpers
 {

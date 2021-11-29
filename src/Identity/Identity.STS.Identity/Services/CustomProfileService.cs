@@ -4,9 +4,7 @@ using IdentityServer4.Models;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -41,7 +39,6 @@ namespace Identity.STS.Identity.Services
                 new Claim("role", string.Join(";",roles)),
                 new Claim("username", user.UserName),
                 new Claim("email", user.Email),
-
             };
             claims.AddRange(claimsFromDb);
 

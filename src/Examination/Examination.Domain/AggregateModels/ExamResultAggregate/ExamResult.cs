@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
 using Examination.Domain.Events;
 using Examination.Domain.SeedWork;
 using MongoDB.Bson.Serialization.Attributes;
+using System;
+using System.Collections.Generic;
 
 namespace Examination.Domain.AggregateModels.ExamResultAggregate
 {

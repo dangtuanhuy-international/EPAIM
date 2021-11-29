@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Identity.Admin.Configuration.Interfaces;
+﻿using Identity.Admin.Configuration.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Identity.Admin.ViewComponents
 {

@@ -1,7 +1,7 @@
-using System.Threading.Tasks;
 using Examination.Application.Queries.GetHomeExamList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace Examination.API.Controllers.V2
 {
@@ -24,6 +24,5 @@ namespace Examination.API.Controllers.V2
             var queryResult = await _mediator.Send(query);
             return Ok(queryResult);
         }
-
     }
 }

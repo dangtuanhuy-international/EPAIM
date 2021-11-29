@@ -3,11 +3,11 @@
 
 // Modified by Jan Škoruba
 
-using System.Linq;
 using AutoMapper;
-using IdentityServer4.EntityFramework.Entities;
 using Identity.Admin.BusinessLogic.Dtos.Configuration;
 using Identity.Admin.EntityFramework.Extensions.Common;
+using IdentityServer4.EntityFramework.Entities;
+using System.Linq;
 
 namespace Identity.Admin.BusinessLogic.Mappers
 {

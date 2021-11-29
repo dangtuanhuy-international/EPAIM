@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Identity.Admin.EntityFramework.Entities;
+﻿using Identity.Admin.EntityFramework.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Identity.Admin.EntityFramework.Interfaces
 {

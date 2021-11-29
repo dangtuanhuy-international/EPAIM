@@ -4,6 +4,5 @@ namespace Identity.Admin.EntityFramework.Interfaces
 {
     public interface IAdminPersistedGrantDbContext : IPersistedGrantDbContext
     {
-
     }
 }

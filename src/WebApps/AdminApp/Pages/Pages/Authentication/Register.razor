@@ -1,9 +1,6 @@
 ﻿@page "/pages/authentication/register"
 @layout LoginLayout
 
-
-
-
 <MudText Typo="Typo.h4" GutterBottom="true">Sign Up</MudText>
 <MudText>Already have an account? <MudLink Href="/pages/authentication/login">Sign In</MudLink></MudText>
 
@@ -11,7 +8,7 @@
 
 <MudTextField T="string" Label="E-mail" Variant="Variant.Outlined"></MudTextField>
 
-<MudTextField @bind-Value="@Password" Label="Password" Variant="Variant.Outlined" InputType="@PasswordInput" Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="TogglePasswordVisibility" Class="mt-4"/>
+<MudTextField @bind-Value="@Password" Label="Password" Variant="Variant.Outlined" InputType="@PasswordInput" Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="TogglePasswordVisibility" Class="mt-4" />
 
 <MudCheckBox @bind-Checked="@AgreeToTerms" Label="I agree to the terms and privacy" Color="Color.Primary" Class="ml-n1 my-3"></MudCheckBox>
 

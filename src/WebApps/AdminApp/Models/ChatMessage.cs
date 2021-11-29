@@ -1,5 +1,4 @@
-﻿
-namespace AdminApp.Models
+﻿namespace AdminApp.Models
 {
     public class ChatMessage
     {

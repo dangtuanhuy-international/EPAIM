@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Skoruba.AuditLogging.Events;
+﻿using Skoruba.AuditLogging.Events;
+using System.Collections.Generic;
 
 namespace Identity.Admin.BusinessLogic.Identity.Events.Identity
 {

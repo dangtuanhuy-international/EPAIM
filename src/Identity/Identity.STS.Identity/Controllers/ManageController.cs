@@ -1,8 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
+﻿using Identity.STS.Identity.Helpers;
+using Identity.STS.Identity.Helpers.Localization;
+using Identity.STS.Identity.ViewModels.Manage;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -11,9 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Identity.STS.Identity.Helpers;
-using Identity.STS.Identity.Helpers.Localization;
-using Identity.STS.Identity.ViewModels.Manage;
+using System;
+using System.Linq;
+using System.Text;
+using System.Text.Encodings.Web;
+using System.Threading.Tasks;
 
 namespace Identity.STS.Identity.Controllers
 {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using AutoMapper;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
 using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
 using Identity.Admin.BusinessLogic.Identity.Mappers.Configuration;
 using Identity.Admin.BusinessLogic.Identity.Resources;
@@ -12,6 +7,11 @@ using Identity.Admin.BusinessLogic.Identity.Services.Interfaces;
 using Identity.Admin.EntityFramework.Identity.Repositories;
 using Identity.Admin.EntityFramework.Identity.Repositories.Interfaces;
 using Identity.Admin.EntityFramework.Interfaces;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -75,7 +75,6 @@ namespace Microsoft.Extensions.DependencyInjection
             where TUserClaimDto : UserClaimDto<TKey>
             where TRoleClaimDto : RoleClaimDto<TKey>
         {
-
             return services.AddAdminAspNetIdentityServices<TAdminDbContext, TAdminDbContext, TUserDto, TRoleDto,
                 TUser, TRole, TKey, TUserClaim, TUserRole, TUserLogin, TRoleClaim, TUserToken,
                 TUsersDto, TRolesDto, TUserRolesDto, TUserClaimsDto,

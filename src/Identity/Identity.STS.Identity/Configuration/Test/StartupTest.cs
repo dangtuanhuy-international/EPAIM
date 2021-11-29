@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Identity.Admin.EntityFramework.Shared.DbContexts;
+using Identity.STS.Identity.Helpers;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Identity.Admin.EntityFramework.Shared.DbContexts;
-using Identity.STS.Identity.Helpers;
 
 namespace Identity.STS.Identity.Configuration.Test
 {

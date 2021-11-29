@@ -1,8 +1,8 @@
-﻿using IdentityServer4.EntityFramework.DbContexts;
+﻿using Identity.Admin.EntityFramework.Interfaces;
+using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Entities;
 using IdentityServer4.EntityFramework.Options;
 using Microsoft.EntityFrameworkCore;
-using Identity.Admin.EntityFramework.Interfaces;
 
 namespace Identity.Admin.EntityFramework.Shared.DbContexts
 {

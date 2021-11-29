@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Skoruba.AuditLogging.EntityFramework.Entities;
 using Identity.Admin.BusinessLogic.Dtos.Log;
 using Identity.Admin.EntityFramework.Entities;
 using Identity.Admin.EntityFramework.Extensions.Common;
+using Skoruba.AuditLogging.EntityFramework.Entities;
 
 namespace Identity.Admin.BusinessLogic.Mappers
 {

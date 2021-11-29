@@ -1,13 +1,13 @@
-﻿using System.Threading.Tasks;
+﻿using Identity.Admin.BusinessLogic.Identity.Dtos.Grant;
+using Identity.Admin.BusinessLogic.Identity.Services.Interfaces;
+using Identity.Admin.Configuration.Constants;
+using Identity.Admin.ExceptionHandling;
+using Identity.Admin.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
-using Identity.Admin.BusinessLogic.Identity.Dtos.Grant;
-using Identity.Admin.BusinessLogic.Identity.Services.Interfaces;
-using Identity.Admin.ExceptionHandling;
-using Identity.Admin.Helpers;
-using Identity.Admin.Configuration.Constants;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.Controllers
 {
@@ -46,7 +46,6 @@ namespace Identity.Admin.Controllers
             return View(grant);
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> PersistedGrantDelete(PersistedGrantDto grant)
@@ -68,7 +67,6 @@ namespace Identity.Admin.Controllers
 
             return RedirectToAction(nameof(PersistedGrants));
         }
-
 
         [HttpGet]
         public async Task<IActionResult> PersistedGrant(string id, int? page)

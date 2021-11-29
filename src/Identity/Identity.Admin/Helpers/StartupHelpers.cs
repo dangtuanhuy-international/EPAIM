@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Threading.Tasks;
+﻿using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
+using Identity.Admin.BusinessLogic.Services;
+using Identity.Admin.BusinessLogic.Services.Interfaces;
+using Identity.Admin.Configuration;
+using Identity.Admin.Configuration.ApplicationParts;
+using Identity.Admin.Configuration.Constants;
+using Identity.Admin.Configuration.Interfaces;
+using Identity.Admin.EntityFramework.Helpers;
+using Identity.Admin.EntityFramework.Interfaces;
+using Identity.Admin.EntityFramework.Repositories;
+using Identity.Admin.EntityFramework.Repositories.Interfaces;
+using Identity.Admin.EntityFramework.Shared.Configuration;
+using Identity.Admin.EntityFramework.SqlServer.Extensions;
+using Identity.Admin.ExceptionHandling;
+using Identity.Admin.Helpers.Localization;
+using Identity.Shared.Authentication;
 using IdentityServer4.EntityFramework.Options;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
@@ -24,24 +37,11 @@ using Skoruba.AuditLogging.EntityFramework.Entities;
 using Skoruba.AuditLogging.EntityFramework.Extensions;
 using Skoruba.AuditLogging.EntityFramework.Repositories;
 using Skoruba.AuditLogging.EntityFramework.Services;
-using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
-using Identity.Admin.BusinessLogic.Services;
-using Identity.Admin.BusinessLogic.Services.Interfaces;
-using Identity.Admin.ExceptionHandling;
-using Identity.Admin.Configuration;
-using Identity.Admin.Configuration.ApplicationParts;
-using Identity.Admin.Configuration.Constants;
-using Identity.Admin.Configuration.Interfaces;
-using Identity.Admin.EntityFramework.Interfaces;
-using Identity.Admin.EntityFramework.Repositories;
-using Identity.Admin.EntityFramework.Repositories.Interfaces;
-using Identity.Admin.Helpers.Localization;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using Identity.Admin.EntityFramework.Shared.Configuration;
-using Identity.Admin.EntityFramework.SqlServer.Extensions;
-using Identity.Admin.EntityFramework.Helpers;
-using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
-using Identity.Shared.Authentication;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.Helpers
 {
@@ -500,6 +500,7 @@ namespace Identity.Admin.Helpers
                             .AddSqlServer(dataProtectionDbConnectionString, name: "DataProtectionDb",
                                 healthQuery: $"SELECT TOP 1 * FROM dbo.[{dataProtectionTableName}]");
                         break;
+
                     default:
                         throw new NotImplementedException($"Health checks not defined for database provider {databaseProvider.ProviderType}");
                 }

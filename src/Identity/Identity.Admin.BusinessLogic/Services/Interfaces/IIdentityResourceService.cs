@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using Identity.Admin.BusinessLogic.Dtos.Configuration;
+﻿using Identity.Admin.BusinessLogic.Dtos.Configuration;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.BusinessLogic.Services.Interfaces
 {

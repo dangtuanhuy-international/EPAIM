@@ -1,16 +1,16 @@
-using System.Reflection;
-using System.IO;
+using Examination.Infrastructure;
+using Examination.Infrastructure.SeedWork;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Serilog;
-using System;
-using Microsoft.Extensions.DependencyInjection;
-using Examination.Infrastructure;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using Examination.Infrastructure.SeedWork;
+using Serilog;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace Examination.API
 {

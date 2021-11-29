@@ -1,8 +1,8 @@
-using System.Collections.Generic;
-using System.Linq;
 using Examination.Domain.AggregateModels.QuestionAggregate;
 using Examination.Domain.SeedWork;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Examination.Domain.AggregateModels.ExamResultAggregate
 {
@@ -16,8 +16,10 @@ namespace Examination.Domain.AggregateModels.ExamResultAggregate
 
         [BsonElement("question")]
         public Question Question { get; set; }
+
         [BsonElement("selectedAnswers")]
         public IEnumerable<Answer> SelectedAnswers { get; set; }
+
         [BsonElement("isCorrect")]
         public bool IsCorrect { get; set; }
     }

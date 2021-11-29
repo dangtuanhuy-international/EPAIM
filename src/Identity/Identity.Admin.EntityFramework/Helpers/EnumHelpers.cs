@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Identity.Admin.EntityFramework.Extensions.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Identity.Admin.EntityFramework.Extensions.Common;
 
 namespace Identity.Admin.EntityFramework.Helpers
 {

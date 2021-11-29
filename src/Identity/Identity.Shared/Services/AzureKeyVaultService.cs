@@ -1,16 +1,16 @@
 ﻿// Original file comes from: https://github.com/damienbod/IdentityServer4AspNetCoreIdentityTemplate
 // Modified by Jan Škoruba
 
+using Identity.Shared.Configuration.Common;
+using Microsoft.Azure.KeyVault;
+using Microsoft.Azure.KeyVault.Models;
+using Microsoft.Azure.Services.AppAuthentication;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
-using Microsoft.Azure.KeyVault;
-using Microsoft.Azure.KeyVault.Models;
-using Microsoft.Azure.Services.AppAuthentication;
-using Microsoft.IdentityModel.Clients.ActiveDirectory;
-using Identity.Shared.Configuration.Common;
 
 namespace Identity.Shared.Services
 {
@@ -85,7 +85,7 @@ namespace Identity.Shared.Services
             // Get all the certificate versions (this will also get the current active version)
             var certificateVersions = await keyVaultClient.GetCertificateVersionsAsync(_azureKeyVaultConfiguration.AzureKeyVaultEndpoint, _azureKeyVaultConfiguration.IdentityServerCertificateName);
 
-            // Find all enabled versions of the certificate and sort them by creation date in descending order 
+            // Find all enabled versions of the certificate and sort them by creation date in descending order
             return certificateVersions
               .Where(certVersion => certVersion.Attributes.Enabled.HasValue && certVersion.Attributes.Enabled.Value)
               .OrderByDescending(certVersion => certVersion.Attributes.Created)

@@ -1,20 +1,16 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Azure.KeyVault;
-using Microsoft.Azure.Services.AppAuthentication;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.AzureKeyVault;
-using Microsoft.Extensions.Hosting;
-using Serilog;
-using Identity.Admin.Configuration;
+﻿using Identity.Admin.Configuration;
 using Identity.Admin.EntityFramework.Shared.DbContexts;
 using Identity.Admin.EntityFramework.Shared.Entities.Identity;
 using Identity.Admin.Helpers;
-using Identity.Shared.Configuration.Common;
 using Identity.Shared.Helpers;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Serilog;
+using System;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Identity.Admin
 {

@@ -1,10 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using Identity.Admin.BusinessLogic.Dtos.Log;
+using Identity.Admin.BusinessLogic.Services.Interfaces;
+using Identity.Admin.Configuration.Constants;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Identity.Admin.BusinessLogic.Dtos.Log;
-using Identity.Admin.BusinessLogic.Services.Interfaces;
-using Identity.Admin.Configuration.Constants;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.Controllers
 {

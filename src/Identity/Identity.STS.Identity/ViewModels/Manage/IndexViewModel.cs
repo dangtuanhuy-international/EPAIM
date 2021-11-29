@@ -17,6 +17,7 @@ namespace Identity.STS.Identity.ViewModels.Manage
         public string PhoneNumber { get; set; }
 
         public string StatusMessage { get; set; }
+
         [MaxLength(255)]
         [Display(Name = "Full Name")]
         public string Name { get; set; }

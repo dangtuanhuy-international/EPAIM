@@ -1,12 +1,12 @@
-﻿using System.Threading.Tasks;
-using Skoruba.AuditLogging.Services;
-using Identity.Admin.BusinessLogic.Dtos.Grant;
+﻿using Identity.Admin.BusinessLogic.Dtos.Grant;
 using Identity.Admin.BusinessLogic.Events.PersistedGrant;
 using Identity.Admin.BusinessLogic.Mappers;
 using Identity.Admin.BusinessLogic.Resources;
 using Identity.Admin.BusinessLogic.Services.Interfaces;
 using Identity.Admin.BusinessLogic.Shared.ExceptionHandling;
 using Identity.Admin.EntityFramework.Repositories.Interfaces;
+using Skoruba.AuditLogging.Services;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.BusinessLogic.Services
 {

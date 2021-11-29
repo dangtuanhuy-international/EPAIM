@@ -9,7 +9,6 @@ namespace Examination.Infrastructure.SeedWork
             public const string User = "user";
             public const string Exam = "exam";
             public const string ExamResult = "exam_result";
-
         }
     }
 }

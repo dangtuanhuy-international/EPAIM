@@ -1,8 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Skoruba.AuditLogging.EntityFramework.DbContexts;
 using Skoruba.AuditLogging.EntityFramework.Entities;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.EntityFramework.Shared.DbContexts
 {
@@ -11,7 +10,6 @@ namespace Identity.Admin.EntityFramework.Shared.DbContexts
         public AdminAuditLogDbContext(DbContextOptions<AdminAuditLogDbContext> dbContextOptions)
             : base(dbContextOptions)
         {
-
         }
 
         public Task<int> SaveChangesAsync()

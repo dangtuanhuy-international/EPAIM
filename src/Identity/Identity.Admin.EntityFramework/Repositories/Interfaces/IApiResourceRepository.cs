@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using Identity.Admin.EntityFramework.Extensions.Common;
 using IdentityServer4.EntityFramework.Entities;
-using Identity.Admin.EntityFramework.Extensions.Common;
+using System.Threading.Tasks;
 using ApiResource = IdentityServer4.EntityFramework.Entities.ApiResource;
 
 namespace Identity.Admin.EntityFramework.Repositories.Interfaces

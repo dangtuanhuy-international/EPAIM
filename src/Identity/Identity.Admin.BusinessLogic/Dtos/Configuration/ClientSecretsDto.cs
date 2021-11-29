@@ -1,8 +1,8 @@
+using Identity.Admin.BusinessLogic.Shared.Dtos.Common;
+using Identity.Admin.EntityFramework.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Identity.Admin.BusinessLogic.Shared.Dtos.Common;
-using Identity.Admin.EntityFramework.Helpers;
 
 namespace Identity.Admin.BusinessLogic.Dtos.Configuration
 {

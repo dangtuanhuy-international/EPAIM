@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.DataProtection;
+﻿using Identity.Shared.Configuration.Common;
+using Identity.Shared.Configuration.Email;
+using Identity.Shared.Email;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Azure.KeyVault;
@@ -8,9 +11,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.AzureKeyVault;
 using Microsoft.Extensions.DependencyInjection;
 using SendGrid;
-using Identity.Shared.Configuration.Common;
-using Identity.Shared.Configuration.Email;
-using Identity.Shared.Email;
 
 namespace Identity.Shared.Helpers
 {

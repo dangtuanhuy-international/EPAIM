@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
-using System.Text.Json;
-using System.Threading.Tasks;
 using Examination.API.Filters;
 using Examination.Application.Commands.StartExam;
 using Examination.Application.Mapping;
@@ -18,15 +12,17 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Mime;
+using System.Text.Json;
 
 namespace Examination.API
 {
@@ -65,7 +61,7 @@ namespace Examination.API
 
             services.AddSingleton<IMongoClient>(c =>
             {
-                return new MongoClient(mongodbConnectionString);
+                return new MongoClient("mongodb://linh2nguyen:mr6iLL5KNp5piiK1M8gSFoiEqlVrYyMl0gcwv2LdbN2tlAITKnzTIij8TbkwnsxWkHUMFEv878y6ypY9RqVHzw==@linh2nguyen.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@linh2nguyen@");
             });
 
             services.AddScoped(c => c.GetService<IMongoClient>()?.StartSession());
@@ -104,7 +100,6 @@ namespace Examination.API
                     }
                 });
                 c.OperationFilter<AuthorizeCheckOperationFilter>();
-
             });
 
             var identityUrl = Configuration.GetValue<string>("IdentityUrl");
@@ -127,14 +122,12 @@ namespace Examination.API
                 };
             });
 
-
-
             services.Configure<ExamSettings>(Configuration);
 
             //Health check
             services.AddHealthChecks()
                     .AddCheck("self", () => HealthCheckResult.Healthy())
-                    .AddMongoDb(mongodbConnectionString: mongodbConnectionString,
+                    .AddMongoDb(mongodbConnectionString: "mongodb://linh2nguyen:mr6iLL5KNp5piiK1M8gSFoiEqlVrYyMl0gcwv2LdbN2tlAITKnzTIij8TbkwnsxWkHUMFEv878y6ypY9RqVHzw==@linh2nguyen.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@linh2nguyen@",
                                 name: "mongo",
                                 failureStatus: HealthStatus.Unhealthy);
 
@@ -151,7 +144,6 @@ namespace Examination.API
             services.AddTransient<IExamRepository, ExamRepository>();
             services.AddTransient<IExamResultRepository, ExamResultRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

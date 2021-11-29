@@ -1,9 +1,9 @@
-using System.Threading.Tasks;
 using Examination.Domain.AggregateModels.UserAggregate;
 using Examination.Infrastructure.SeedWork;
 using MediatR;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System.Threading.Tasks;
 
 namespace Examination.Infrastructure.Repositories
 {

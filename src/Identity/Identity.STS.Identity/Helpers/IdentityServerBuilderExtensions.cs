@@ -1,13 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Identity.Shared.Configuration.Common;
+using Identity.Shared.Helpers;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.IO;
-using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using Identity.Shared.Configuration.Common;
-using Identity.Shared.Helpers;
-using Identity.STS.Identity.Configuration;
 
 namespace Identity.STS.Identity.Helpers
 {
@@ -84,7 +81,6 @@ namespace Identity.STS.Identity.Helpers
 
                 if (File.Exists(certificateConfiguration.SigningCertificatePfxFilePath))
                 {
-
                     try
                     {
                         builder.AddSigningCredential(new X509Certificate2(certificateConfiguration.SigningCertificatePfxFilePath, certificateConfiguration.SigningCertificatePfxFilePassword));
@@ -142,7 +138,6 @@ namespace Identity.STS.Identity.Helpers
                 var certificate = certCollection[0];
 
                 builder.AddValidationKey(certificate);
-
             }
             else if (certificateConfiguration.UseValidationCertificateForAzureKeyVault)
             {
@@ -165,7 +160,6 @@ namespace Identity.STS.Identity.Helpers
                     try
                     {
                         builder.AddValidationKey(new X509Certificate2(certificateConfiguration.ValidationCertificatePfxFilePath, certificateConfiguration.ValidationCertificatePfxFilePassword));
-
                     }
                     catch (Exception e)
                     {

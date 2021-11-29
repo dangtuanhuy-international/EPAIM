@@ -1,6 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Identity.Admin.Configuration;
+using Identity.Admin.Configuration.Interfaces;
+using Identity.Admin.EntityFramework.Interfaces;
 using IdentityModel;
 using IdentityServer4.EntityFramework.Mappers;
 using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
@@ -10,9 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Skoruba.AuditLogging.EntityFramework.DbContexts;
 using Skoruba.AuditLogging.EntityFramework.Entities;
-using Identity.Admin.Configuration;
-using Identity.Admin.Configuration.Interfaces;
-using Identity.Admin.EntityFramework.Interfaces;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.Helpers
 {

@@ -12,6 +12,5 @@ namespace Examination.Domain.AggregateModels.QuestionAggregate
 
         [BsonElement("isCorrect")]
         public bool IsCorrect { get; set; }
-
     }
 }

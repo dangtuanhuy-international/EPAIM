@@ -1,11 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-using Skoruba.AuditLogging.Services;
-using Identity.Admin.BusinessLogic.Dtos.Log;
+﻿using Identity.Admin.BusinessLogic.Dtos.Log;
 using Identity.Admin.BusinessLogic.Events.Log;
 using Identity.Admin.BusinessLogic.Mappers;
 using Identity.Admin.BusinessLogic.Services.Interfaces;
 using Identity.Admin.EntityFramework.Repositories.Interfaces;
+using Skoruba.AuditLogging.Services;
+using System;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.BusinessLogic.Services
 {

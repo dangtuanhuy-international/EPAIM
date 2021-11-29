@@ -26,11 +26,11 @@
         </MudToolBar>
         @if (folder == "inbox")
         {
-                <Inbox />
+            <Inbox />
         }
         else
         {
-                <MudText Align="Align.Center" Class="mt-16">No Emails :(</MudText>
+            <MudText Align="Align.Center" Class="mt-16">No Emails :(</MudText>
         }
     </MudPaper>
 </div>
@@ -38,7 +38,6 @@
     <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Class="mx-4 mt-6 mb-4">Compose</MudButton>
     <EmailNavList folder="@folder" />
 </MudDrawer>
-
 
 @code
 {

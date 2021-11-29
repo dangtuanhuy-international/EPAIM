@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Examination.Domain.AggregateModels.QuestionAggregate;
 using Examination.Domain.SeedWork;
 using Examination.Dtos.Enums;
 using MongoDB.Bson.Serialization.Attributes;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Examination.Domain.AggregateModels.ExamAggregate
 {
@@ -22,7 +22,6 @@ namespace Examination.Domain.AggregateModels.ExamAggregate
 
             if (numberOfQuestionCorrectForPass > numberOfQuestions)
                 throw new ArgumentNullException($"{nameof(numberOfQuestionCorrectForPass)} is invalid.");
-
 
             (Name, ShortDesc, Content, NumberOfQuestions,
                     Duration, Questions, Level, DateCreated, OwnerUserId, NumberOfQuestionCorrectForPass,
@@ -43,8 +42,8 @@ namespace Examination.Domain.AggregateModels.ExamAggregate
             this.OwnerUserId = ownerUserId;
             this.NumberOfQuestionCorrectForPass = numberOfQuestionCorrectForPass;
             this.IsTimeRestricted = isTimeRestricted;
-
         }
+
         [BsonElement("name")]
         public string Name { get; set; }
 
@@ -77,6 +76,5 @@ namespace Examination.Domain.AggregateModels.ExamAggregate
 
         [BsonElement("isTimeRestricted")]
         public bool IsTimeRestricted { get; set; }
-
     }
 }

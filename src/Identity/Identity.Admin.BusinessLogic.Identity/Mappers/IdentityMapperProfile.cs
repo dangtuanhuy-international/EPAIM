@@ -3,13 +3,13 @@
 
 // Modified by Jan Škoruba
 
-using System;
-using System.Collections.Generic;
 using AutoMapper;
-using Microsoft.AspNetCore.Identity;
 using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
 using Identity.Admin.BusinessLogic.Shared.ExceptionHandling;
 using Identity.Admin.EntityFramework.Extensions.Common;
+using Microsoft.AspNetCore.Identity;
+using System;
+using System.Collections.Generic;
 
 namespace Identity.Admin.BusinessLogic.Identity.Mappers
 {

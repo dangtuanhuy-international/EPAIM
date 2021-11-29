@@ -1,7 +1,3 @@
-using System.Linq;
-using System.Threading.Tasks;
-using IdentityServer4.Models;
-using Skoruba.AuditLogging.Services;
 using Identity.Admin.BusinessLogic.Dtos.Configuration;
 using Identity.Admin.BusinessLogic.Events.ApiResource;
 using Identity.Admin.BusinessLogic.Helpers;
@@ -11,6 +7,10 @@ using Identity.Admin.BusinessLogic.Services.Interfaces;
 using Identity.Admin.BusinessLogic.Shared.ExceptionHandling;
 using Identity.Admin.EntityFramework.Helpers;
 using Identity.Admin.EntityFramework.Repositories.Interfaces;
+using IdentityServer4.Models;
+using Skoruba.AuditLogging.Services;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.BusinessLogic.Services
 {

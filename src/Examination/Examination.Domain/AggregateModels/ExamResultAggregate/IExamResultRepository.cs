@@ -1,5 +1,5 @@
-using System.Threading.Tasks;
 using Examination.Domain.SeedWork;
+using System.Threading.Tasks;
 
 namespace Examination.Domain.AggregateModels.ExamResultAggregate
 {

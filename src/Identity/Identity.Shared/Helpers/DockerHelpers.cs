@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
-using Identity.Shared.Configuration.Common;
+﻿using Identity.Shared.Configuration.Common;
+using Microsoft.Extensions.Configuration;
 
 namespace Identity.Shared.Helpers
 {

@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity.UI.Services;
+﻿using Identity.Shared.Configuration.Email;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Logging;
-using Identity.Shared.Configuration.Email;
 using System;
 using System.Net.Mail;
 using System.Threading.Tasks;

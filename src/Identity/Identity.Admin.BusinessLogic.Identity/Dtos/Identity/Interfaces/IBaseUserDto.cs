@@ -3,6 +3,7 @@
     public interface IBaseUserDto
     {
         object Id { get; }
+
         bool IsDefaultId();
     }
 }

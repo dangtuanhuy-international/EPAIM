@@ -1,5 +1,13 @@
-using System.IdentityModel.Tokens.Jwt;
 using HealthChecks.UI.Client;
+using Identity.Admin.Configuration;
+using Identity.Admin.Configuration.Constants;
+using Identity.Admin.Configuration.Interfaces;
+using Identity.Admin.EntityFramework.Shared.DbContexts;
+using Identity.Admin.EntityFramework.Shared.Entities.Identity;
+using Identity.Admin.Helpers;
+using Identity.Shared.Dtos;
+using Identity.Shared.Dtos.Identity;
+using Identity.Shared.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -8,18 +16,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Skoruba.AuditLogging.EntityFramework.Entities;
-using Identity.Admin.BusinessLogic.Identity.Dtos.Identity;
-using Identity.Admin.Configuration.Interfaces;
-using Identity.Admin.EntityFramework.Shared.DbContexts;
-using Identity.Admin.EntityFramework.Shared.Entities.Identity;
-using Identity.Admin.Helpers;
-using Identity.Admin.Configuration;
-using Identity.Admin.Configuration.Constants;
 using System;
-using Microsoft.AspNetCore.DataProtection;
-using Identity.Shared.Dtos;
-using Identity.Shared.Dtos.Identity;
-using Identity.Shared.Helpers;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Identity.Admin
 {

@@ -1,7 +1,5 @@
 ﻿$(function () {
-
     var adminSecrets = {
-
         guid: function () {
             return "ss-s-s-s-sss".replace(/s/g, adminSecrets.s4);
         },
@@ -12,8 +10,8 @@
                 .substring(1);
         },
 
-        eventHandlers: function() {
-            $("#generate-guid-button").click(function() {
+        eventHandlers: function () {
+            $("#generate-guid-button").click(function () {
                 $("#secret-input").val(adminSecrets.guid());
             });
 
@@ -26,15 +24,10 @@
             });
         },
 
-        init: function() {
-
+        init: function () {
             adminSecrets.eventHandlers();
-
         }
-
     };
 
-
     adminSecrets.init();
-
 })

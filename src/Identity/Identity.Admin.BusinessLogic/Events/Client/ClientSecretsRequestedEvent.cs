@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Skoruba.AuditLogging.Events;
+using System;
 using System.Collections.Generic;
-using Skoruba.AuditLogging.Events;
 
 namespace Identity.Admin.BusinessLogic.Events.Client
 {

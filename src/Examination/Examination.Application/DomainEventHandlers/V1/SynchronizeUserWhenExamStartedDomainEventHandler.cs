@@ -1,14 +1,15 @@
-using System.Threading;
-using System.Threading.Tasks;
 using Examination.Domain.AggregateModels.UserAggregate;
 using Examination.Domain.Events;
 using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Examination.Application.DomainEventHandlers
 {
     public class SynchronizeUserWhenExamStartedDomainEventHandler : INotificationHandler<ExamStartedDomainEvent>
     {
         private readonly IUserRepository _userRepository;
+
         public SynchronizeUserWhenExamStartedDomainEventHandler(
             IUserRepository userRepository)
         {

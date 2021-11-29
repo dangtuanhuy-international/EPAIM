@@ -10,7 +10,7 @@
 <h4>@Localizer["SubTitle", ViewData["LoginProvider"]]</h4>
 
 <form asp-controller="Account" asp-action="ExternalLoginConfirmation" asp-route-returnurl="@ViewData["ReturnUrl"]"
-    method="post" class="form-horizontal">
+      method="post" class="form-horizontal">
     <hr />
     @await Html.PartialAsync("_ValidationSummary")
     <div class="alert alert-info" role="alert">

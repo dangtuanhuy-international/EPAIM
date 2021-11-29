@@ -4,10 +4,10 @@
 // Modified by Jan Škoruba
 
 using AutoMapper;
-using IdentityServer4.EntityFramework.Entities;
 using Identity.Admin.BusinessLogic.Dtos.Configuration;
 using Identity.Admin.BusinessLogic.Shared.Dtos.Common;
 using Identity.Admin.EntityFramework.Extensions.Common;
+using IdentityServer4.EntityFramework.Entities;
 
 namespace Identity.Admin.BusinessLogic.Mappers
 {

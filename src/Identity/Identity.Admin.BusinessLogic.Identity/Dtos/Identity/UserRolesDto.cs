@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Identity.Admin.BusinessLogic.Identity.Dtos.Identity.Base;
+﻿using Identity.Admin.BusinessLogic.Identity.Dtos.Identity.Base;
 using Identity.Admin.BusinessLogic.Identity.Dtos.Identity.Interfaces;
 using Identity.Admin.BusinessLogic.Shared.Dtos.Common;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Identity.Admin.BusinessLogic.Identity.Dtos.Identity
 {

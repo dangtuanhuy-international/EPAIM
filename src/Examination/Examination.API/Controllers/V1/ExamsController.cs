@@ -1,12 +1,11 @@
-using System.Threading.Tasks;
 using Examination.Application.Queries.GetHomeExamList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace Examination.API.Controllers.V1
 {
-
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     [ApiVersion("1.0")]
@@ -32,6 +31,5 @@ namespace Examination.API.Controllers.V1
             _logger.LogInformation("END: GetExamList");
             return Ok(queryResult);
         }
-
     }
 }

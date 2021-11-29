@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using Identity.Admin.EntityFramework.Extensions.Common;
 using IdentityServer4.EntityFramework.Entities;
-using Identity.Admin.EntityFramework.Extensions.Common;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.EntityFramework.Repositories.Interfaces
 {

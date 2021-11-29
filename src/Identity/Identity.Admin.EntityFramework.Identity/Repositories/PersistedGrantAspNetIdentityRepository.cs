@@ -1,17 +1,17 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
-using IdentityServer4.EntityFramework.Entities;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Identity.Admin.EntityFramework.Entities;
+﻿using Identity.Admin.EntityFramework.Entities;
 using Identity.Admin.EntityFramework.Extensions.Common;
 using Identity.Admin.EntityFramework.Extensions.Enums;
 using Identity.Admin.EntityFramework.Extensions.Extensions;
 using Identity.Admin.EntityFramework.Identity.Repositories.Interfaces;
 using Identity.Admin.EntityFramework.Interfaces;
+using IdentityServer4.EntityFramework.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.EntityFramework.Identity.Repositories
 {

@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Identity.Admin.BusinessLogic.Resources;
+﻿using Identity.Admin.BusinessLogic.Resources;
 using Identity.Admin.BusinessLogic.Services;
 using Identity.Admin.BusinessLogic.Services.Interfaces;
 using Identity.Admin.EntityFramework.Interfaces;
 using Identity.Admin.EntityFramework.Repositories;
 using Identity.Admin.EntityFramework.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -14,7 +14,6 @@ namespace Microsoft.Extensions.DependencyInjection
             this IServiceCollection services)
             where TAdminDbContext : DbContext, IAdminPersistedGrantDbContext, IAdminConfigurationDbContext, IAdminLogDbContext
         {
-
             return services.AddAdminServices<TAdminDbContext, TAdminDbContext, TAdminDbContext>();
         }
 

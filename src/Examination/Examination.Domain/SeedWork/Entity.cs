@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
 using MediatR;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System;
+using System.Collections.Generic;
 
 namespace Examination.Domain.SeedWork
 {
@@ -69,8 +69,8 @@ namespace Examination.Domain.SeedWork
             }
             else
                 return base.GetHashCode();
-
         }
+
         public static bool operator ==(Entity left, Entity right)
         {
             if (Object.Equals(left, null))

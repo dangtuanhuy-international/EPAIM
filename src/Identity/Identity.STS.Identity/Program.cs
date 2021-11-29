@@ -1,10 +1,10 @@
-﻿using System;
-using System.IO;
+﻿using Identity.Shared.Helpers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using Identity.Shared.Helpers;
+using System;
+using System.IO;
 
 namespace Identity.STS.Identity
 {

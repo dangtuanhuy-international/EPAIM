@@ -1,8 +1,8 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+﻿using Microsoft.AspNetCore.Http;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 
 namespace Identity.Admin.Middlewares
 {
@@ -10,6 +10,7 @@ namespace Identity.Admin.Middlewares
     {
         private readonly RequestDelegate _next;
         public static readonly string TestAuthorizationHeader = "FakeAuthorization";
+
         public AuthenticatedTestRequestMiddleware(RequestDelegate next)
         {
             _next = next;

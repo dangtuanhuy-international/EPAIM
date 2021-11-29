@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Identity.Admin.BusinessLogic.Dtos.Configuration;
+﻿using Identity.Admin.BusinessLogic.Dtos.Configuration;
 using Identity.Admin.BusinessLogic.Shared.Dtos.Common;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Identity.Admin.BusinessLogic.Services.Interfaces
 {

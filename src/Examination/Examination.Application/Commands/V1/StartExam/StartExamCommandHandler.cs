@@ -1,18 +1,20 @@
+using Examination.Domain.AggregateModels.ExamResultAggregate;
+using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Examination.Domain.AggregateModels.ExamResultAggregate;
-using MediatR;
 
 namespace Examination.Application.Commands.StartExam
 {
     public class StartExamCommandHandler : IRequestHandler<StartExamCommand, bool>
     {
         private readonly IExamResultRepository _examResultRepository;
+
         public StartExamCommandHandler(IExamResultRepository examResultRepository)
         {
             _examResultRepository = examResultRepository;
         }
+
         public async Task<bool> Handle(StartExamCommand request, CancellationToken cancellationToken)
         {
             var examResult = await _examResultRepository.GetDetails(request.UserId, request.ExamId);
@@ -25,7 +27,6 @@ namespace Examination.Application.Commands.StartExam
                     examResult.ExamStartDate = DateTime.Now;
                     examResult.Finished = false;
                     examResult.StartExam(request.FirstName, request.LastName);
-
                 }
                 else
                 {

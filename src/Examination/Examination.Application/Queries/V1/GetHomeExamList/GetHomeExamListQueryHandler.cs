@@ -1,13 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 using AutoMapper;
 using Examination.Domain.AggregateModels.ExamAggregate;
 using Examination.Dtos;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Examination.Application.Queries.GetHomeExamList
 {
@@ -29,8 +29,8 @@ namespace Examination.Application.Queries.GetHomeExamList
             _clientSessionHandle = clientSessionHandle ?? throw new ArgumentNullException(nameof(_clientSessionHandle));
             _mapper = mapper;
             _logger = logger;
-
         }
+
         public async Task<IEnumerable<ExamDto>> Handle(GetHomeExamListQuery request, CancellationToken cancellationToken)
         {
             _logger.LogInformation("BEGIN: GetHomeExamListQueryHandler");
