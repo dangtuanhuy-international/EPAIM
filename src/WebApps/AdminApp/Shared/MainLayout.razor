@@ -4,7 +4,12 @@
 @inject NavigationManager NavigationManager;
 
 <MudThemeProvider Theme="_themeManager.Theme" />
-<MudDialogProvider />
+<MudDialogProvider FullWidth="true"
+                   MaxWidth="MaxWidth.ExtraSmall"
+                   CloseButton="true"
+                   DisableBackdropClick="true"
+                   NoHeader="true"
+                   Position="DialogPosition.Center" />
 <MudSnackbarProvider />
 
 <MudLayout>
@@ -73,6 +78,7 @@
 <MudThemeManagerButton OnClick="@((e) => OpenThemeManager(true))" />
 <MudThemeManager Open="_themeManagerOpen" OpenChanged="OpenThemeManager" Theme="_themeManager"
                  ThemeChanged="UpdateTheme" />
+
 
 @code {
     private ThemeManagerTheme _themeManager = new ThemeManagerTheme();

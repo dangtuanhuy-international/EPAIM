@@ -6,8 +6,8 @@ namespace AdminApp.Services.Interfaces
 {
     public interface IAuthService
     {
-        Task<TokenResponse> Login(LoginRequest loginRequest);
+        Task<TokenResponse> LoginAsync(LoginRequest loginRequest);
 
-        Task Logout();
+        Task LogoutAsync();
     }
 }
